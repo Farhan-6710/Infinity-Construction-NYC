@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight, Phone, UserCircle } from "lucide-react"; // Import the UserCircle icon
+import { ChevronLeft, ChevronRight, UserCircle } from "lucide-react"; // Import the UserCircle icon
 
 const testimonials = [
   {
