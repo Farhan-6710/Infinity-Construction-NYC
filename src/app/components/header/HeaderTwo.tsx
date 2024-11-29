@@ -61,7 +61,7 @@ const HeaderTwo: React.FC = () => {
                 <div className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 cursor-pointer">
                   SERVICES
                 </div>
-                <ul className="absolute left-0 mt-0 hidden group-hover:block bg-white dark:bg-gray-800 rounded shadow-lg w-[400px] pt-14">
+                <ul className="absolute left-0 mt-0 hidden group-hover:block bg-white dark:bg-gray-800 rounded shadow-lg w-[400px] pt-6">
                   <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 px-4 py-2">
                     <Link href="/services/historical-landmarks-restoration">
                       Historical Landmarks Design Restoration

@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import {
   Sheet,
@@ -8,16 +7,23 @@ import {
   SheetDescription,
 } from "@/components/ui/sheet";
 import { useState } from "react";
-import { Menu, Phone } from "lucide-react";
+import { Menu, Phone, ChevronDown, ChevronUp } from "lucide-react";
 import { ModeToggle } from "../ModeToggle";
 
 function SidebarMenu() {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
-    // Toggle Sheet open/close
-    const toggleSheet = () => {
-      setIsOpen(!isOpen);
-    };
+  // Toggle Sheet open/close
+  const toggleSheet = () => {
+    setIsOpen(!isOpen);
+  };
+
+  // Toggle Services Dropdown
+  const toggleServicesDropdown = () => {
+    setIsServicesOpen(!isServicesOpen);
+  };
+
   return (
     <div>
       {/* Right Div: Mobile Menu Toggle */}
@@ -36,14 +42,8 @@ function SidebarMenu() {
           className="dark:bg-gray-800 transition-colors duration-300"
         >
           <SheetHeader>
-            <SheetTitle
-              className="dark:text-gray-100"
-              style={{ fontFamily: "var(--font-forum)" }}
-            >
-              Mobile Menu
-            </SheetTitle>
             <SheetDescription
-              className="dark:text-gray-500 text-2xl font-semibold"
+              className="text-center py-10 dark:text-gray-500 text-2xl font-semibold"
               style={{ fontFamily: "var(--font-forum)" }}
             >
               Infinity Construction NYC
@@ -62,12 +62,80 @@ function SidebarMenu() {
             >
               About
             </Link>
-            <Link
-              href="/services"
-              className="text-lg text-gray-700 dark:text-gray-300 hover:text-orange-500"
-            >
-              Services
-            </Link>
+
+            {/* Services Dropdown */}
+            <div className="flex flex-col">
+              <button
+                onClick={toggleServicesDropdown}
+                className="flex items-center justify-between text-lg text-gray-700 dark:text-gray-300 hover:text-orange-500 w-full"
+              >
+                Services
+                {isServicesOpen ? (
+                  <ChevronUp className="w-5 h-5" />
+                ) : (
+                  <ChevronDown className="w-5 h-5" />
+                )}
+              </button>
+              {isServicesOpen && (
+                <div className="ml-4 mt-2 flex flex-col space-y-2">
+                  <Link
+                    href="/services/historical-landmarks-restoration"
+                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
+                  >
+                    Historical Landmarks Design Restoration
+                  </Link>
+                  <Link
+                    href="/services/brownstone-restoration"
+                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
+                  >
+                    Brownstone Restoration
+                  </Link>
+                  <Link
+                    href="/services/fire-escape-restoration"
+                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
+                  >
+                    Fire Escape Restoration
+                  </Link>
+                  <Link
+                    href="/services/masonry-contractors"
+                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
+                  >
+                    Masonry Contractors
+                  </Link>
+                  <Link
+                    href="/services/brownstone-renovation"
+                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
+                  >
+                    Brownstone Renovation Contractors Brooklyn
+                  </Link>
+                  <Link
+                    href="/services/brownstone-facade-restoration"
+                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
+                  >
+                    Brownstone Facade Restoration
+                  </Link>
+                  <Link
+                    href="/services/roofing"
+                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
+                  >
+                    Roofing
+                  </Link>
+                  <Link
+                    href="/services/paving"
+                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
+                  >
+                    Paving
+                  </Link>
+                  <Link
+                    href="/services/brick-pointing"
+                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
+                  >
+                    Brick Pointing
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link
               href="/projects"
               className="text-lg text-gray-700 dark:text-gray-300 hover:text-orange-500"
@@ -87,13 +155,15 @@ function SidebarMenu() {
               Contact
             </Link>
           </nav>
-          <div className="p-4">
-            <button className="bg-primary text-white px-4 py-3 hover:bg-white hover:text-primary hover:border-primary hover:border transition-all duration-300 flex items-center space-x-2">
-              <Phone className="w-5 h-5" />
-              <span>347 939 5779</span>
-            </button>
+          <div className="flex gap-4 items-center">
+            <div className="p-4">
+              <button className="bg-primary text-white px-4 py-3 hover:bg-white hover:text-primary hover:border-primary hover:border transition-all duration-300 flex items-center space-x-2">
+                <Phone className="w-5 h-5" />
+                <span>347 939 5779</span>
+              </button>
+            </div>
+            <ModeToggle />
           </div>
-          <ModeToggle />
         </SheetContent>
       </Sheet>
     </div>
