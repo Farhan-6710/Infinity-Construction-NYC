@@ -43,7 +43,7 @@ const LetsChat: React.FC = () => {
       {/* Chat Panel */}
       <div
         ref={chatPanelRef}
-        className={`fixed bottom-6 right-6 w-full sm:w-96 md:w-96 bg-white shadow-2xl dark:border rounded-t-lg p-6 max-w-[90vw] sm:max-w-[400px] transition-transform dark:bg-slate-950 dark:text-gray-100`}
+        className={`fixed bottom-6 z-20 right-5 w-full sm:w-96 md:w-96 bg-white shadow-2xl rounded-t-lg p-6 max-w-[90vw] sm:max-w-[400px] transition-transform dark:bg-slate-950 dark:text-gray-100`}
         style={{
           transform: isChatOpen
             ? "translateX(0)"

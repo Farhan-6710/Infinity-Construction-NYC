@@ -44,10 +44,9 @@ const Footer = () => {
               </p>
             </div>
             <div className="mt-6 flex space-x-6">
-
               {/* Instagram Icon */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/infinity_construction_nyc/"
                 className="text-white hover:text-pink-500"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -56,7 +55,7 @@ const Footer = () => {
               </a>
               {/* Facebook Icon */}
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/InfinityConstructionNYC"
                 className="text-white hover:text-blue-500"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -65,14 +64,13 @@ const Footer = () => {
               </a>
               {/* Twitter Icon */}
               <a
-                href="https://twitter.com"
+                href="https://www.linkedin.com/in/imrul-hassan-403724268"
                 className="text-white hover:text-blue-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Linkedin className="h-8 w-8 bg-white text-black rounded-full p-2" />
               </a>
-
             </div>
           </div>
 

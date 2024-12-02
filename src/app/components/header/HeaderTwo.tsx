@@ -49,94 +49,95 @@ const HeaderTwo: React.FC = () => {
               className="flex items-center space-x-6 text-gray-700 dark:text-gray-300 font-medium"
               style={{ fontFamily: "var(--font-forum)" }}
             >
-              <li className="text-secondary text-lg hover:text-orange-500 bg-yellow-100 dark:bg-yellow-200 p-2 px-4">
+              <li className="text-secondary text-xl font-bold transition-all duration-300 hover:text-orange-500 bg-yellow-100 dark:bg-yellow-200 p-2 px-4">
                 <Link href="/">HOME</Link>
               </li>
-              <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500">
+              <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500">
                 <Link href="/about">ABOUT</Link>
               </li>
 
               {/* Services Dropdown */}
               <li className="relative z-10 group">
-                <div className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 cursor-pointer">
+                <div className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 cursor-pointer">
                   SERVICES
                 </div>
                 <ul className="absolute left-0 mt-0 hidden group-hover:block bg-white dark:bg-gray-800 rounded shadow-lg w-[400px] pt-6">
-                  <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 px-4 py-2">
+                  <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/services/historical-landmarks-restoration">
                       Historical Landmarks Design Restoration
                     </Link>
                   </li>
-                  <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 px-4 py-2">
+                  <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/services/brownstone-restoration">
                       Brownstone Restoration
                     </Link>
                   </li>
-                  <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 px-4 py-2">
+                  <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/services/fire-escape-restoration">
                       Fire Escape Restoration
                     </Link>
                   </li>
-                  <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 px-4 py-2">
+                  <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/services/masonry-contractors">
                       Masonry Contractors
                     </Link>
                   </li>
-                  <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 px-4 py-2">
+                  <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/services/brownstone-renovation">
                       Brownstone Renovation Contractors Brooklyn
                     </Link>
                   </li>
-                  <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 px-4 py-2">
+                  <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/services/brownstone-facade-restoration">
                       Brownstone Facade Restoration
                     </Link>
                   </li>
-                  <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 px-4 py-2">
+                  <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/services/roofing">Roofing</Link>
                   </li>
-                  <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 px-4 py-2">
+                  <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/services/paving">Paving</Link>
                   </li>
-                  <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 px-4 py-2">
+                  <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/services/brick-pointing">Brick Pointing</Link>
                   </li>
                 </ul>
               </li>
 
-              <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500">
+              <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500">
                 <Link href="/projects">PROJECTS</Link>
               </li>
-              <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500">
+              <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500">
                 <Link href="/gallery">GALLERY</Link>
               </li>
 
               <li className="relative z-10 group">
-                <div className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 cursor-pointer">
+                <div className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 cursor-pointer">
                   MORE
                 </div>
                 <ul className="absolute left-0 mt-0 hidden group-hover:block bg-white dark:bg-gray-800 rounded shadow-lg">
-                  <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 px-4 py-2">
+                  <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/faq">FAQ</Link>
                   </li>
-                  <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 px-4 py-2">
+                  <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/blog">BLOG</Link>
                   </li>
-                  <li className="text-secondary dark:text-gray-300 text-lg hover:text-orange-500 px-4 py-2">
+                  <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/contact">CONTACT</Link>
                   </li>
                 </ul>
               </li>
-
-              <ModeToggle />
             </ul>
           </nav>
-          <button className="bg-primary text-white px-4 py-3 hover:bg-white hover:text-primary hover:border-primary hover:border transition-all duration-300 flex items-center space-x-2">
+          <button className="bg-primary text-white px-4 py-3 hover:bg-white hover:text-primary hover:border-primary hover:border border border-transparent rounded-md shadow-lg transition-all duration-300 flex items-center space-x-2">
             <Phone className="w-5 h-5" />
             <span>347 939 5779</span>
           </button>
         </div>
-        <SidebarMenu />
+        <div className="flex xl:hidden">
+          <SidebarMenu />
+        </div>
+        <ModeToggle />
       </div>
     </header>
   );

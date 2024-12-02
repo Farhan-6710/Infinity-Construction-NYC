@@ -1,34 +1,64 @@
 import React from "react";
 import { Mail, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const HeaderOne: React.FC = () => {
   return (
     <div>
-      <header className="hidden md:flex w-full bg-white text-black dark:bg-gray-900 dark:text-white p-4">
+      <header className="hidden xl:flex w-full bg-gray-100 text-primary dark:bg-gray-900 dark:text-white p-4">
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 md:px-16">
           {/* First Div */}
-          <div className="flex flex-col sm:flex-row sm:space-x-8 w-full sm:w-auto mb-4 sm:mb-0 text-blue-950 dark:text-gray-300">
-            <div className="flex items-center space-x-2 mb-2 sm:mb-0">
-              <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span className="text-xs sm:text-sm">
-                infinityconstructionnyc@gmail.com
-              </span>
-            </div>
+          <div className="flex flex-col sm:flex-row sm:space-x-8 w-full sm:w-auto mb-4 sm:mb-0 text-tertiary dark:text-gray-300">
+            <Link href="infinityconstructionnyc@gmail.com">
+              <div className="flex items-center space-x-2 mb-2 sm:mb-0">
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span
+                  className="text-sm sm:text-lg tracking-wider"
+                  style={{ fontFamily: "var(--font-forum)" }}
+                >
+                  infinityconstructionnyc@gmail.com
+                </span>
+              </div>
+            </Link>
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span className="text-xs sm:text-sm">347 939 5779</span>
+              <span
+                className="text-sm sm:text-lg"
+                style={{ fontFamily: "var(--font-forum)" }}
+              >
+                347 939 5779
+              </span>
             </div>
           </div>
 
           {/* Second Div */}
-          <div className="flex space-x-4 w-full sm:w-auto justify-center sm:justify-end">
-            <Instagram className="w-4 h-4 sm:w-5 sm:h-5 cursor-pointer text-blue-950 dark:text-gray-300" />
-            <Facebook className="w-4 h-4 sm:w-5 sm:h-5 cursor-pointer text-blue-950 dark:text-gray-300" />
-            <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 cursor-pointer text-blue-950 dark:text-gray-300" />
+          <div
+            className="flex space-x-4 w-full sm:w-auto justify-center sm:justify-end text-primary"
+            style={{ fontFamily: "var(--font-forum)" }}
+          >
+            <Link href="https://www.instagram.com/infinity_construction_nyc/">
+              <Button variant="secondary" size="md" className="rounded-2xl">
+                <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="text-sm sm:text-lg">Instagram</span>
+              </Button>
+            </Link>
+            <Link href="https://www.facebook.com/InfinityConstructionNYC">
+              <Button variant="secondary" size="md" className="rounded-2xl">
+                <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="text-sm sm:text-lg">Facebook</span>
+              </Button>
+            </Link>
+            <Link href="https://www.linkedin.com/in/imrul-hassan-403724268">
+              <Button variant="secondary" size="md" className="rounded-2xl">
+                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="text-sm sm:text-lg">LinkedIn</span>
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
-      <div className=" border-b border-slate-700 dark:border-transparent mx-20"></div>
+      <div className=" border-b border-black/10 dark:border-transparent"></div>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import HeaderOne from "./components/header/HeaderOne";
 import HeaderTwo from "./components/header/HeaderTwo";
 import HeroSection from "./components/HeroSection";
 import LetsChat from "./components/LetsChat";
+import MapComponent from "./components/MapComponent";
 import OurAffiliatesSection from "./components/OurAffiliatesSection";
 import ProjectSection from "./components/ProjectsSection";
 import TestimonialSection from "./components/TestimonialSection";
@@ -23,6 +24,7 @@ export default function Home() {
       <TestimonialSection />
       <OurAffiliatesSection />
       <LetsChat />
+      <MapComponent />
       <Footer />
     </div>
   );

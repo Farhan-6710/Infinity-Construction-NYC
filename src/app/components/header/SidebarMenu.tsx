@@ -4,11 +4,9 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
-  SheetDescription,
 } from "@/components/ui/sheet";
 import { useState } from "react";
 import { Menu, Phone, ChevronDown, ChevronUp } from "lucide-react";
-import { ModeToggle } from "../ModeToggle";
 
 function SidebarMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +25,7 @@ function SidebarMenu() {
   return (
     <div>
       {/* Right Div: Mobile Menu Toggle */}
-      <div className="xl:hidden absolute right-4 top-6 sm:right-4 sm:top-16 md:right-4 md:top-28">
+      <div className="xl:hidden absolute right-4 top-6 sm:right-4 sm:top-16 md:right-4 md:top-20">
         <button
           onClick={toggleSheet}
           className="text-gray-700 dark:text-gray-300 p-3 hover:text-orange-500"
@@ -42,12 +40,12 @@ function SidebarMenu() {
           className="dark:bg-gray-800 transition-colors duration-300"
         >
           <SheetHeader>
-            <SheetDescription
-              className="text-center py-10 dark:text-gray-500 text-2xl font-semibold"
+            <SheetTitle
+              className="text-center py-10 dark:text-gray-300 text-2xl font-semibold"
               style={{ fontFamily: "var(--font-forum)" }}
             >
               Infinity Construction NYC
-            </SheetDescription>
+            </SheetTitle>
           </SheetHeader>
           <nav className="flex flex-col space-y-4 p-4">
             <Link
@@ -162,7 +160,6 @@ function SidebarMenu() {
                 <span>347 939 5779</span>
               </button>
             </div>
-            <ModeToggle />
           </div>
         </SheetContent>
       </Sheet>
