@@ -55,7 +55,7 @@ function SidebarMenu() {
               Home
             </Link>
             <Link
-              href="/about"
+              href="/"
               className="text-lg text-gray-700 dark:text-gray-300 hover:text-orange-500"
             >
               About
@@ -77,55 +77,55 @@ function SidebarMenu() {
               {isServicesOpen && (
                 <div className="ml-4 mt-2 flex flex-col space-y-2">
                   <Link
-                    href="/services/historical-landmarks-restoration"
+                    href="/"
                     className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
                   >
                     Historical Landmarks Design Restoration
                   </Link>
                   <Link
-                    href="/services/brownstone-restoration"
+                    href="/"
                     className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
                   >
                     Brownstone Restoration
                   </Link>
                   <Link
-                    href="/services/fire-escape-restoration"
+                    href="/"
                     className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
                   >
                     Fire Escape Restoration
                   </Link>
                   <Link
-                    href="/services/masonry-contractors"
+                    href="/"
                     className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
                   >
                     Masonry Contractors
                   </Link>
                   <Link
-                    href="/services/brownstone-renovation"
+                    href="/"
                     className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
                   >
                     Brownstone Renovation Contractors Brooklyn
                   </Link>
                   <Link
-                    href="/services/brownstone-facade-restoration"
+                    href="/"
                     className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
                   >
                     Brownstone Facade Restoration
                   </Link>
                   <Link
-                    href="/services/roofing"
+                    href="/"
                     className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
                   >
                     Roofing
                   </Link>
                   <Link
-                    href="/services/paving"
+                    href="/"
                     className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
                   >
                     Paving
                   </Link>
                   <Link
-                    href="/services/brick-pointing"
+                    href="/"
                     className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
                   >
                     Brick Pointing
@@ -135,19 +135,19 @@ function SidebarMenu() {
             </div>
 
             <Link
-              href="/projects"
+              href="/"
               className="text-lg text-gray-700 dark:text-gray-300 hover:text-orange-500"
             >
               Projects
             </Link>
             <Link
-              href="/blog"
+              href="/"
               className="text-lg text-gray-700 dark:text-gray-300 hover:text-orange-500"
             >
               Blog
             </Link>
             <Link
-              href="/contact"
+              href="/"
               className="text-lg text-gray-700 dark:text-gray-300 hover:text-orange-500"
             >
               Contact
