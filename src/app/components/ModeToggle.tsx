@@ -2,10 +2,23 @@
 
 import * as React from "react";
 import { useTheme } from "next-themes";
-import "./themeToggle.css"
+import { useEffect, useState } from "react";
+import "./themeToggle.css";
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // This will run only on the client-side
+    setMounted(true);
+  }, []);
+
+  // Prevent rendering until the component is mounted to avoid hydration errors
+  if (!mounted) {
+    return null;
+  }
+
   const isDarkMode = theme === "dark";
 
   const toggleTheme = () => {
