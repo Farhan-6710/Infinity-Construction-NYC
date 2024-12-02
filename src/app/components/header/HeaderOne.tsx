@@ -37,19 +37,28 @@ const HeaderOne: React.FC = () => {
             className="flex space-x-4 w-full sm:w-auto justify-center sm:justify-end text-primary"
             style={{ fontFamily: "var(--font-forum)" }}
           >
-            <Link href="https://www.instagram.com/infinity_construction_nyc/">
+            <Link
+              href="https://www.instagram.com/infinity_construction_nyc/"
+              target="_blank"
+            >
               <Button variant="secondary" size="md" className="rounded-2xl">
                 <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span className="text-sm sm:text-lg">Instagram</span>
               </Button>
             </Link>
-            <Link href="https://www.facebook.com/InfinityConstructionNYC">
+            <Link
+              href="https://www.facebook.com/InfinityConstructionNYC"
+              target="_blank"
+            >
               <Button variant="secondary" size="md" className="rounded-2xl">
                 <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span className="text-sm sm:text-lg">Facebook</span>
               </Button>
             </Link>
-            <Link href="https://www.linkedin.com/in/imrul-hassan-403724268">
+            <Link
+              href="https://www.linkedin.com/in/imrul-hassan-403724268"
+              target="_blank"
+            >
               <Button variant="secondary" size="md" className="rounded-2xl">
                 <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span className="text-sm sm:text-lg">LinkedIn</span>
