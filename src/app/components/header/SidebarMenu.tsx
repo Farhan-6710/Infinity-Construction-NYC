@@ -37,7 +37,7 @@ function SidebarMenu() {
       <Sheet open={isOpen} onOpenChange={toggleSheet}>
         <SheetContent
           side="left"
-          className="dark:bg-gray-800 transition-colors duration-300"
+          className="dark:bg-slate-950 transition-colors duration-300"
         >
           <SheetHeader>
             <SheetTitle
