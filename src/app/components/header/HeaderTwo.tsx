@@ -49,12 +49,16 @@ const HeaderTwo: React.FC = () => {
               className="flex items-center space-x-6 text-gray-700 dark:text-gray-300 font-medium"
               style={{ fontFamily: "var(--font-forum)" }}
             >
-              <li className="text-secondary text-xl font-bold transition-all duration-300 hover:text-orange-500 bg-yellow-100 dark:bg-yellow-200 p-2 px-4">
-                <Link href="/">HOME</Link>
-              </li>
-              <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500">
-                <Link href="/about">ABOUT</Link>
-              </li>
+              <Link href="/">
+                <li className="text-secondary text-xl font-bold transition-all duration-300 hover:text-orange-500 bg-yellow-100 dark:bg-yellow-200 p-2 px-4">
+                  HOME
+                </li>
+              </Link>
+              <Link href="/">
+                <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500">
+                  ABOUT
+                </li>
+              </Link>
 
               {/* Services Dropdown */}
               <li className="relative z-10 group">
@@ -63,53 +67,56 @@ const HeaderTwo: React.FC = () => {
                 </div>
                 <ul className="absolute left-0 mt-0 hidden group-hover:block bg-white dark:bg-gray-800 rounded shadow-lg w-[400px] pt-6">
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/services/historical-landmarks-restoration">
+                    <Link href="/">
                       Historical Landmarks Design Restoration
                     </Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/services/brownstone-restoration">
+                    <Link href="/">
                       Brownstone Restoration
                     </Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/services/fire-escape-restoration">
+                    <Link href="/">
                       Fire Escape Restoration
                     </Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/services/masonry-contractors">
+                    <Link href="/">
                       Masonry Contractors
                     </Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/services/brownstone-renovation">
+                    <Link href="/">
                       Brownstone Renovation Contractors Brooklyn
                     </Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/services/brownstone-facade-restoration">
+                    <Link href="/">
                       Brownstone Facade Restoration
                     </Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/services/roofing">Roofing</Link>
+                    <Link href="/">Roofing</Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/services/paving">Paving</Link>
+                    <Link href="/">Paving</Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/services/brick-pointing">Brick Pointing</Link>
+                    <Link href="/">Brick Pointing</Link>
                   </li>
                 </ul>
               </li>
-
-              <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500">
-                <Link href="/projects">PROJECTS</Link>
-              </li>
-              <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500">
-                <Link href="/gallery">GALLERY</Link>
-              </li>
+              <Link href="/">
+                <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500">
+                  PROJECTS
+                </li>
+              </Link>
+              <Link href="/">
+                <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500">
+                  GALLERY
+                </li>
+              </Link>
 
               <li className="relative z-10 group">
                 <div className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 cursor-pointer">
@@ -117,13 +124,13 @@ const HeaderTwo: React.FC = () => {
                 </div>
                 <ul className="absolute left-0 mt-0 hidden group-hover:block bg-white dark:bg-gray-800 rounded shadow-lg">
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/faq">FAQ</Link>
+                    <Link href="/">FAQ</Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/blog">BLOG</Link>
+                    <Link href="/">BLOG</Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/contact">CONTACT</Link>
+                    <Link href="/">CONTACT</Link>
                   </li>
                 </ul>
               </li>
