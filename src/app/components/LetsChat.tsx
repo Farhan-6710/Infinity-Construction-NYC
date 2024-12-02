@@ -95,7 +95,7 @@ const LetsChat: React.FC = () => {
 
           {/* Send Button */}
           <button
-            className="bg-primary text-white px-6 py-2 hover:bg-orange-600 transition-all duration-300 dark:bg-orange-700 dark:hover:bg-orange-600"
+            className="bg-primary text-white px-6 py-2 hover:bg-orange-600 transition-all duration-300 dark:bg-primary dark:hover:bg-orange-600"
             onClick={() => alert("Message Sent!")}
           >
             Send
