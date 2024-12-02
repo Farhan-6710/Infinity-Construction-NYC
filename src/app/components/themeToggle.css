@@ -154,3 +154,9 @@
 .shadow-for-light:hover {
   box-shadow: 0 2px 10px rgba(39, 39, 39, 0.267); /* Example shadow style */
 }
+
+@media(max-width:678px) {
+  .fixed-container {
+    top: 120px;
+  }
+}
