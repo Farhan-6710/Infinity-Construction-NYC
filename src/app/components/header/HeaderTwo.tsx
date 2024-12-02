@@ -72,19 +72,13 @@ const HeaderTwo: React.FC = () => {
                     </Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/">
-                      Brownstone Restoration
-                    </Link>
+                    <Link href="/">Brownstone Restoration</Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/">
-                      Fire Escape Restoration
-                    </Link>
+                    <Link href="/">Fire Escape Restoration</Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/">
-                      Masonry Contractors
-                    </Link>
+                    <Link href="/">Masonry Contractors</Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/">
@@ -92,9 +86,7 @@ const HeaderTwo: React.FC = () => {
                     </Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                    <Link href="/">
-                      Brownstone Facade Restoration
-                    </Link>
+                    <Link href="/">Brownstone Facade Restoration</Link>
                   </li>
                   <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
                     <Link href="/">Roofing</Link>
@@ -136,7 +128,7 @@ const HeaderTwo: React.FC = () => {
               </li>
             </ul>
           </nav>
-          <button className="bg-primary text-white px-4 py-3 hover:bg-white hover:text-primary hover:border-primary hover:border border border-transparent rounded-md shadow-lg transition-all duration-300 flex items-center space-x-2">
+          <button className="bg-primary text-white px-4 py-3 hover:bg-white hover:text-primary dark:hover:text-white hover:border-primary hover:border border border-transparent dark:border-transparent dark:hover:bg-orange-600 rounded-md shadow-lg transition-all duration-300 flex items-center space-x-2">
             <Phone className="w-5 h-5" />
             <span>347 939 5779</span>
           </button>
