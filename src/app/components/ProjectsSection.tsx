@@ -55,7 +55,7 @@ const ProjectSection = () => {
         <div className="w-full lg:w-1/2 px-0 sm:px-4 relative">
           <div className="embla overflow-hidden" ref={emblaRef}>
             <div className="embla__container flex">
-              {projectData.map((project, index) => (
+              {projectData.map((project) => (
                 <div
                   key={project.id}
                   className="relative flex-[0_0_100%] w-full"

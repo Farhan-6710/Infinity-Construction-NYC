@@ -23,7 +23,7 @@ const BannerAbout: React.FC = () => {
       }}
     >
       <h2 className="mb-5 text-3xl font-semibold lg:text-6xl ml-6">
-        Area's Of Services
+        Area&apos;s Of Services
       </h2>
       <ul className="list-disc list-inside lg:text-2xl space-y-2">
         <li>Historical Landmarks Design Restoration</li>
