@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image"; // Import Next.js Image component
+import { motion } from "framer-motion"; // Import Framer Motion
 
 const data = [
   {
@@ -34,12 +37,12 @@ const data = [
 
 const CardsSection = () => {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section className="py-12 lg:py-20 lg:pt-0 bg-accent dark:bg-gray-900">
       <div className="max-w-screen-xl mx-auto px-4">
         {/* Section Heading */}
         <div className="text-center mb-8">
           <h2
-            className="text-3xl sm:text-5xl font-medium text-black dark:text-white"
+            className="text-3xl sm:text-5xl font-bold text-tertiary dark:text-white"
             style={{ fontFamily: "var(--font-forum)" }}
           >
             Our Speciality
@@ -48,19 +51,27 @@ const CardsSection = () => {
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {data.map((item) => (
-            <div
+          {data.map((item, index) => (
+            <motion.div
               key={item.id}
-              className="flex flex-col sm:flex-row bg-accent dark:bg-gray-800 shadow-md"
+              className="flex flex-col sm:flex-row bg-white dark:bg-gray-800 shadow-md"
+              initial={{ opacity: 0, scale: 0.9, y: 50 }} // Initial state
+              whileInView={{ opacity: 1, scale: 1, y: 0 }} // Animate when in view
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15, // Delay based on index
+                ease: "backInOut",
+              }}
+              viewport={{ once: true, amount: 0.2 }} // Trigger animation when 20% visible
             >
               {/* Image Section */}
-              <div className="w-full lg:w-3/5 mb-4 lg:mb-0">
+              <div className="w-full lg:w-3/5 mb-4 lg:mb-0 border-8 border-tertiary">
                 <Image
                   src={item.imageUrl}
                   alt={`Card ${item.id}`}
-                  width={650} // Increased width for bigger images
-                  height={400} // Increased height for bigger images
-                  className="w-full h-auto object-cover"
+                  width={650}
+                  height={400}
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -76,7 +87,7 @@ const CardsSection = () => {
                   {item.paragraph}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -12,7 +12,7 @@ const OurAffiliatesSection: React.FC = () => {
           fontFamily: "var(--font-forum)",
         }}
       >
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl text-tertiary dark:text-white mb-6">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl text-tertiary dark:text-white mb-6 font-bold">
           OUR AFFILIATES
         </h2>
         <p className="text-lg sm:text-xl text-tertiary dark:text-gray-300 max-w-4xl mx-auto">
@@ -28,9 +28,9 @@ const OurAffiliatesSection: React.FC = () => {
         <div className="border border-tertiary border-r-0 dark:border-gray-600 w-[370px] h-[330px] flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 shadow-lg">
           <div className="flex items-center justify-center w-full">
             <img
-              src="/Affiliates-img-1.png" // Replace with your affiliate image
+              src="/Affiliates-img-11.png" // Replace with your affiliate image
               alt="Affiliate 1"
-              className="object-contain max-w-full max-h-full"
+              className="object-contain max-w-56 max-h-56"
             />
           </div>
           <p className="text-center text-lg sm:text-xl text-tertiary dark:text-white mt-4">
@@ -44,7 +44,7 @@ const OurAffiliatesSection: React.FC = () => {
             <img
               src="/Affiliates-img-2.png" // Replace with your affiliate image
               alt="Affiliate 2"
-              className="object-contain max-w-full max-h-full"
+              className="object-contain max-w-56 max-h-56"
             />
           </div>
           <p className="text-center text-lg sm:text-xl text-tertiary dark:text-white mt-4">
@@ -58,7 +58,7 @@ const OurAffiliatesSection: React.FC = () => {
             <img
               src="/Affiliates-img-3.png" // Replace with your affiliate image
               alt="Affiliate 3"
-              className="object-contain max-w-full max-h-full"
+              className="object-contain max-w-56 max-h-56"
             />
           </div>
           <p className="text-center text-lg sm:text-xl text-tertiary dark:text-white mt-4">

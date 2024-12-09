@@ -25,10 +25,10 @@ function SidebarMenu() {
   return (
     <div>
       {/* Right Div: Mobile Menu Toggle */}
-      <div className="xl:hidden absolute right-4 top-6 sm:right-4 sm:top-16 md:right-4 md:top-20">
+      <div className="xl:hidden absolute right-4 top-6 sm:right-4">
         <button
           onClick={toggleSheet}
-          className="text-gray-700 dark:text-gray-300 p-3 hover:text-orange-500"
+          className="text-gray-300 dark:text-gray-300 p-3 hover:text-gray-400 transition-all duration-300"
         >
           <Menu className="w-8 h-8" />
         </button>
@@ -41,7 +41,7 @@ function SidebarMenu() {
         >
           <SheetHeader>
             <SheetTitle
-              className="text-center py-10 dark:text-gray-300 text-2xl font-semibold"
+              className="text-center pt-10 pb-4 dark:text-gray-300 text-2xl font-semibold"
               style={{ fontFamily: "var(--font-forum)" }}
             >
               Infinity Construction NYC

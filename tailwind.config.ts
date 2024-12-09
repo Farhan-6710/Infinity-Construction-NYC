@@ -25,7 +25,7 @@ export default {
           foreground: "#ffffff", // Optional, can be used for contrast
         },
         secondary: {
-          DEFAULT: "#993500",
+          DEFAULT: "#6F4E37",
           foreground: "hsl(var(--secondary-foreground))",
         },
         tertiary: {

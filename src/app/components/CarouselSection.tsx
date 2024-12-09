@@ -4,22 +4,27 @@ import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import CarouselContent from "./CarouselContent";
 
 const slides = [
   {
     id: 1,
-    image: "/banner-1.jpg",
-    description: "Slide 1 Description",
+    title: "Slide 1 Title",
+    description: "This is the description for Slide 1",
+    image: "/banner-img-14.jpg",
   },
   {
     id: 2,
-    image: "/banner-2.jpg",
-    description: "Slide 2 Description",
+    title: "Slide 2 Title",
+    description: "This is the description for Slide 2",
+    image: "/banner-img-13.jpg",
   },
   {
     id: 3,
-    image: "/banner-3.jpg",
-    description: "Slide 3 Description",
+    title: "Slide 3 Title",
+    description: "This is the description for Slide 3",
+    image: "/banner-img-12.jpg",
   },
 ];
 
@@ -27,11 +32,14 @@ const CarouselSection: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [totalSlides, setTotalSlides] = useState(0);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setCanScrollPrev(emblaApi.canScrollPrev());
     setCanScrollNext(emblaApi.canScrollNext());
+    setSelectedIndex(emblaApi.selectedScrollSnap());
   }, [emblaApi]);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
@@ -49,57 +57,81 @@ const CarouselSection: React.FC = () => {
 
     const autoplay = setInterval(() => {
       emblaApi.scrollNext(); // Scroll to the next slide
-    }, 3000); // 3 seconds interval
+    }, 5000); // 3 seconds interval
 
     return () => clearInterval(autoplay); // Cleanup interval on component unmount
   }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    setTotalSlides(emblaApi.scrollSnapList().length); // Get the total number of slides
+    emblaApi.on("select", onSelect);
+    onSelect(); // Initial state
+  }, [emblaApi, onSelect]);
 
   return (
     <div className="relative w-full overflow-hidden">
       {/* Carousel Viewport */}
       <div className="embla" ref={emblaRef}>
         <div className="flex">
-          {slides.map((slide) => (
+          {slides.map((slide, index) => (
             <div
               key={slide.id}
-              className="relative flex-[0_0_100%] w-full h-[550px] overflow-hidden"
+              className="relative flex-[0_0_100%] w-full h-[440px] sm:h-screen overflow-hidden"
             >
-              {/* Slide Image */}
-              <Image
-                src={slide.image}
-                alt={`Slide ${slide.id}`}
-                fill
-                className="object-cover"
-                priority={slide.id === 1} // Prioritize the first slide for faster loading
-              />
-
-              {/* Transparent Overlay */}
-              <div className="absolute inset-0 dark:bg-black dark:opacity-40"></div>
-              {/* Slide Description */}
-              <div className="absolute bottom-4 left-4 bg-black/50 text-white p-3 rounded-md">
-                {slide.description}
-              </div>
+              <motion.div
+                key={slide.id}
+                className="relative flex-[0_0_100%] w-full h-screen overflow-hidden"
+                initial={{ scale: 1.6 }}
+                animate={{ scale: selectedIndex === index ? 1.03 : 1.6 }}
+                transition={{
+                  duration: 2.5,
+                  ease: "backInOut",
+                }}
+              >
+                {/* Slide Image */}
+                <Image
+                  src={slide.image}
+                  alt={`Slide ${slide.id}`}
+                  fill
+                  className="object-cover"
+                  loading="lazy" // Lazy load the image
+                />
+                {/* Transparent Overlay */}
+                <div className="absolute bg-black/50 z-10 h-full w-full"></div>
+                {/* Slide Description */}
+                {/* Slide Description (Centered using CarouselContent) */}
+              </motion.div>
+              <CarouselContent />
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Counter */}
+      <div
+        className="absolute bottom-5 left-5 text-white text-sm sm:text-2xl backdrop-blur-md px-4 sm:px-6 py-2 rounded-full"
+        style={{ fontFamily: "var(--font-forum)" }}
+      >
+        {`${selectedIndex + 1} / ${totalSlides}`}
       </div>
 
       {/* Previous Button */}
       <button
         onClick={scrollPrev}
         disabled={!canScrollPrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 text-white p-2 rounded-full hover:bg-white/40 backdrop-blur-md"
+        className="absolute z-20 bottom-5 right-1/2 -translate-x-2 sm:bottom-auto sm:right-auto sm:left-4 sm:top-1/2 -translate-y-1/2 bg-white/10 text-white p-2 rounded-full hover:bg-white/40 backdrop-blur-md"
       >
-        <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-14" />
+        <ChevronLeft className="w-8 h-8 sm:h-14" />
       </button>
 
       {/* Next Button */}
       <button
         onClick={scrollNext}
         disabled={!canScrollNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 text-white p-2 rounded-full hover:bg-white/40 backdrop-blur-md"
+        className="absolute z-20 bottom-5 left-1/2 translate-x-2 sm:bottom-auto sm:left-auto sm:right-4 sm:top-1/2 -translate-y-1/2 bg-white/10 text-white p-2 rounded-full hover:bg-white/40 backdrop-blur-md"
       >
-        <ChevronRight className="w-6 h-6 sm:w-8 sm:h-14" />
+        <ChevronRight className="w-8 h-8 sm:h-14" />
       </button>
     </div>
   );
