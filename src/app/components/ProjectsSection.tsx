@@ -66,7 +66,7 @@ const ProjectSection = () => {
                     width={650}
                     height={400}
                     className="object-cover h-[600px] w-full"
-                    priority={index === 0} // Load first image as priority
+                    loading="lazy"
                   />
                 </div>
               ))}
