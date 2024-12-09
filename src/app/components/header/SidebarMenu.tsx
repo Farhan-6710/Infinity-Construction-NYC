@@ -6,7 +6,15 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { useState } from "react";
-import { Menu, Phone, ChevronDown, ChevronUp } from "lucide-react";
+import {
+  Menu,
+  Phone,
+  ChevronDown,
+  ChevronUp,
+  Instagram,
+  Facebook,
+  Linkedin,
+} from "lucide-react";
 
 function SidebarMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +45,7 @@ function SidebarMenu() {
       <Sheet open={isOpen} onOpenChange={toggleSheet}>
         <SheetContent
           side="left"
-          className="dark:bg-slate-950 transition-colors duration-300"
+          className="dark:bg-slate-950 transition-colors duration-300 overflow-y-auto" // Enable scroll in sidebar
         >
           <SheetHeader>
             <SheetTitle
@@ -153,13 +161,48 @@ function SidebarMenu() {
               Contact
             </Link>
           </nav>
-          <div className="flex gap-4 items-center">
+
+          {/* Phone Button */}
+          <div className="flex gap-4 items-center mt-6">
             <div className="p-4">
               <button className="bg-primary text-white px-4 py-3 hover:bg-white hover:text-primary hover:border-primary hover:border transition-all duration-300 flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
                 <span>347 939 5779</span>
               </button>
             </div>
+          </div>
+
+          {/* Social Media Icons Section */}
+          <div className="mt-6 flex space-x-6 justify-center">
+            {/* Instagram Icon */}
+            <a
+              href="https://www.instagram.com/infinity_construction_nyc/"
+              className="text-white hover:text-pink-500"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram className="h-10 w-10 bg-primary text-white rounded-full p-2 hover:bg-tertiary transition-all duration-300" />
+            </a>
+
+            {/* Facebook Icon */}
+            <a
+              href="https://www.facebook.com/InfinityConstructionNYC"
+              className="text-white hover:text-blue-500"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook className="h-10 w-10 bg-primary text-white rounded-full p-2 hover:bg-tertiary transition-all duration-300" />
+            </a>
+
+            {/* LinkedIn Icon */}
+            <a
+              href="https://www.linkedin.com/in/imrul-hassan-403724268"
+              className="text-white hover:text-blue-500"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin className="h-10 w-10 bg-primary text-white rounded-full p-2 hover:bg-tertiary transition-all duration-300" />
+            </a>
           </div>
         </SheetContent>
       </Sheet>
