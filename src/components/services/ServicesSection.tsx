@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import BannerForm from "./BannerForm";
-import BannerAbout from "./BannerAbout";
+import ServicesForm from "./ServicesForm";
+import ServicesAbout from "./ServicesAbout";
 
 const HeroSection = () => {
   return (
@@ -93,14 +93,14 @@ const HeroSection = () => {
         </div>
         <div className="flex flex-col gap-6 lg:flex-row">
           {/* About Section */}
-            <div className="w-full lg:w-1/2">
-              <BannerAbout />
-            </div>
+          <div className="w-full lg:w-1/2">
+            <ServicesAbout />
+          </div>
 
-            {/* Form Section */}
-            <div className="w-full lg:w-1/2">
-              <BannerForm />
-            </div>
+          {/* Form Section */}
+          <div className="w-full lg:w-1/2">
+            <ServicesForm />
+          </div>
         </div>
       </div>
     </>

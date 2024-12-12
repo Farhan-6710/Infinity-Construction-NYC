@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Forum, Work_Sans } from "next/font/google"; // Importing Forum and Work Sans
 import "./globals.css";
-import { ThemeProvider } from "./components/ThemeProvider";
+import { ThemeProvider } from "../components/extras/ThemeProvider";
 
 // Geist Sans font
 const geistSans = localFont({

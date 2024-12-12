@@ -1,22 +1,22 @@
-import BannerSection from "./components/BannerSection";
-import CardsSection from "./components/CardsSection";
-import Footer from "./components/Footer";
-import HeaderTwo from "./components/header/HeaderTwo";
-import HeroSection from "./components/HeroSection";
-import LetsChat from "./components/LetsChat";
-import MapComponent from "./components/MapComponent";
-import OurAffiliatesSection from "./components/OurAffiliatesSection";
-import ProjectSection from "./components/ProjectsSection";
-import TestimonialSection from "./components/TestimonialSection";
-import TestimonialsHeading from "./components/TestimonialsHeading";
+import ServiceSpeciality from "../components/services/ServiceSpeciality";
+import CarouselSection from "../components/carouselSection/CarouselSection";
+import Footer from "../components/Footer";
+import HeaderTwo from "../components/header/HeaderTwo";
+import HeroSection from "../components/services/ServicesSection";
+import LetsChat from "../components/extras/LetsChat";
+import MapComponent from "../components/MapComponent";
+import OurAffiliatesSection from "../components/OurAffiliatesSection";
+import ProjectSection from "../components/ProjectsSection";
+import TestimonialSection from "../components/testimonials/TestimonialSection";
+import TestimonialsHeading from "../components/testimonials/TestimonialsHeading";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <HeaderTwo />
-      <BannerSection />
+      <CarouselSection />
       <HeroSection />
-      <CardsSection />
+      <ServiceSpeciality />
       <ProjectSection />
       <TestimonialsHeading />
       <TestimonialSection />
@@ -24,6 +24,6 @@ export default function Home() {
       <LetsChat />
       <MapComponent />
       <Footer />
-    </div>
+    </>
   );
 }

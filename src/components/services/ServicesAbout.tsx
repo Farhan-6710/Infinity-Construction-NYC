@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-const BannerAbout: React.FC = () => {
+const ServicesAbout: React.FC = () => {
   const [clipPath, setClipPath] = useState<string>("none");
 
   useEffect(() => {
@@ -40,4 +40,4 @@ const BannerAbout: React.FC = () => {
   );
 };
 
-export default BannerAbout;
+export default ServicesAbout;

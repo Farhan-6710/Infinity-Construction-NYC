@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone } from "lucide-react";
-import { ModeToggle } from "../ModeToggle";
+import { ModeToggle } from "../extras/ModeToggle";
 import SidebarMenu from "./SidebarMenu";
 import Navbar from "./Navbar";
 

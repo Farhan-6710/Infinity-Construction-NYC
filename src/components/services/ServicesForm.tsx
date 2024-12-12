@@ -1,6 +1,6 @@
 import React from "react";
 
-const BannerForm: React.FC = () => {
+const ServicesForm: React.FC = () => {
   return (
     <div
       className="p-6 lg:p-12 text-black dark:text-white"
@@ -63,4 +63,4 @@ const BannerForm: React.FC = () => {
   );
 };
 
-export default BannerForm;
+export default ServicesForm;
