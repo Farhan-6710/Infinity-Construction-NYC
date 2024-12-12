@@ -37,7 +37,7 @@ const Navbar = () => {
           style={{ fontFamily: "var(--font-forum)" }}
         >
           <Link href="/">
-            <li className="text-xl font-bold transition-all duration-300 bg-primary dark:bg-yellow-100 p-2 px-4 text-white">
+            <li className="text-xl font-bold transition-all duration-300 bg-primary dark:bg-primary p-2 px-4 text-white">
               HOME
             </li>
           </Link>
