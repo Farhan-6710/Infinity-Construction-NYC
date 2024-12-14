@@ -41,7 +41,7 @@ const Navbar = () => {
               HOME
             </li>
           </Link>
-          <Link href="/">
+          <Link href="/about">
             <li className="text-xl hover:text-orange-500">ABOUT</li>
           </Link>
 
@@ -52,38 +52,42 @@ const Navbar = () => {
             </div>
             <ul className="absolute left-0 mt-0 hidden group-hover:block bg-white dark:bg-gray-800 rounded shadow-lg w-[400px] pt-6">
               <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                <Link href="/">Historical Landmarks Design Restoration</Link>
+                <Link href="/services">
+                  Historical Landmarks Design Restoration
+                </Link>
               </li>
               <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                <Link href="/">Brownstone Restoration</Link>
+                <Link href="/services">Brownstone Restoration</Link>
               </li>
               <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                <Link href="/">Fire Escape Restoration</Link>
+                <Link href="/services">Fire Escape Restoration</Link>
               </li>
               <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                <Link href="/">Masonry Contractors</Link>
+                <Link href="/services">Masonry Contractors</Link>
               </li>
               <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                <Link href="/">Brownstone Renovation Contractors Brooklyn</Link>
+                <Link href="/services">
+                  Brownstone Renovation Contractors Brooklyn
+                </Link>
               </li>
               <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                <Link href="/">Brownstone Facade Restoration</Link>
+                <Link href="/services">Brownstone Facade Restoration</Link>
               </li>
               <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                <Link href="/">Roofing</Link>
+                <Link href="/services">Roofing</Link>
               </li>
               <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                <Link href="/">Paving</Link>
+                <Link href="/services">Paving</Link>
               </li>
               <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                <Link href="/">Brick Pointing</Link>
+                <Link href="/services">Brick Pointing</Link>
               </li>
             </ul>
           </li>
-          <Link href="/">
+          <Link href="/projects">
             <li className="text-xl hover:text-orange-500">PROJECTS</li>
           </Link>
-          <Link href="/">
+          <Link href="/gallery">
             <li className="text-xl hover:text-orange-500">GALLERY</li>
           </Link>
 
@@ -99,7 +103,7 @@ const Navbar = () => {
                 <Link href="/">BLOG</Link>
               </li>
               <li className="text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2">
-                <Link href="/">CONTACT</Link>
+                <Link href="/contact">CONTACT</Link>
               </li>
             </ul>
           </li>

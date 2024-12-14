@@ -6,27 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import CarouselContent from "./CarouselContent";
-
-const slides = [
-  {
-    id: 1,
-    title: "Slide 1 Title",
-    description: "This is the description for Slide 1",
-    image: "/banner-img-14.jpg",
-  },
-  {
-    id: 2,
-    title: "Slide 2 Title",
-    description: "This is the description for Slide 2",
-    image: "/banner-img-13.jpg",
-  },
-  {
-    id: 3,
-    title: "Slide 3 Title",
-    description: "This is the description for Slide 3",
-    image: "/banner-img-12.jpg",
-  },
-];
+import { slides } from "@/data/carouselSlidesData";
 
 const CarouselSection: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
