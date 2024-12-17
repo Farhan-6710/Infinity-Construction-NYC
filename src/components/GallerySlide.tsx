@@ -30,7 +30,7 @@ export const GallerySlide: React.FC<GallerySlideProps> = ({
       />
       <div
         className={cn(
-          "absolute inset-0 bg-black/50 transition-opacity duration-500",
+          "absolute inset-0 bg-black/70 transition-opacity duration-500",
           isSelected ? "opacity-0" : "opacity-100"
         )}
       />

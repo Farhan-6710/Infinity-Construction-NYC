@@ -60,7 +60,7 @@ const HeaderTwo: React.FC = () => {
           </div>
           <div
             className={`flex flex-col justify-center items-center ${
-              scrolled ? "text-tertiary dark:text-white" : "text-white"
+              scrolled ? "text-stone-950 dark:text-white" : "text-white"
             }`}
           >
             <p
