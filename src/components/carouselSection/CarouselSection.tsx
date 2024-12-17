@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import CarouselContent from "./CarouselContent";
-import { slides } from "@/data/carouselSlidesData";
+import { slides } from "@/data/bannerSlidesData";
 
 const CarouselSection: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -78,7 +78,7 @@ const CarouselSection: React.FC = () => {
                   loading="lazy" // Lazy load the image
                 />
                 {/* Transparent Overlay */}
-                <div className="absolute bg-black/50 z-10 h-full w-full"></div>
+                <div className="absolute bg-black/40 sm:bg-black/30 z-10 h-full w-full"></div>
                 {/* Slide Description */}
                 {/* Slide Description (Centered using CarouselContent) */}
               </motion.div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { specialityData } from "@/data/ourSpeciality";
+import { specialityData } from "@/data/ourSpecialityData";
 
 const ServiceSpeciality = () => {
 

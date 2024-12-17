@@ -20,7 +20,7 @@ const ProjectSection = () => {
   // Autoplay functionality
   useEffect(() => {
     if (!emblaApi) return;
-
+    
     const autoplay = setInterval(() => {
       emblaApi.scrollNext(); // Scroll to the next slide
     }, 5000); // 3 seconds interval
@@ -65,7 +65,7 @@ const ProjectSection = () => {
                     alt={project.title}
                     width={650}
                     height={400}
-                    className="object-cover h-[600px] w-full"
+                    className="object-cover h-[300px] md:h-[600px] w-full"
                     loading="lazy"
                   />
                 </div>
@@ -78,25 +78,25 @@ const ProjectSection = () => {
             {/* Left Navigation Button */}
             <button
               onClick={goToPrev}
-              className="absolute left-4 sm:left-8 top-1/2 transform -translate-y-1/2 text-white hover:text-tertiary p-3 rounded-full hover:bg-opacity-70 transition-all duration-300 bg-tertiary hover:bg-white/40 backdrop-blur-sm"
+              className="absolute left-4 sm:left-8 top-1/2 transform -translate-y-1/2 text-white hover:text-tertiary p-2 rounded-full hover:bg-opacity-70 transition-all duration-300 bg-tertiary hover:bg-white/40 backdrop-blur-sm"
             >
-              <ChevronLeft className="w-8 h-8" />
+              <ChevronLeft className="w-5 h-5 md:w-7 md:h-7" />
             </button>
 
             {/* Right Navigation Button */}
             <button
               onClick={goToNext}
-              className="absolute right-4 sm:right-8 top-1/2 transform -translate-y-1/2 text-white hover:text-tertiary p-3 rounded-full hover:bg-opacity-70 transition-all duration-300 bg-tertiary hover:bg-white/40 backdrop-blur-sm"
+              className="absolute right-4 sm:right-8 top-1/2 transform -translate-y-1/2 text-white hover:text-tertiary p-2 rounded-full hover:bg-opacity-70 transition-all duration-300 bg-tertiary hover:bg-white/40 backdrop-blur-sm"
             >
-              <ChevronRight className="w-8 h-8" />
+              <ChevronRight className="w-5 h-5 md:w-7 md:h-7" />
             </button>
 
             {/* Slide Number (Bottom Left) */}
             <div
-              className="absolute bottom-4 right-8 text-white text-xl font-bold backdrop-blur-sm p-2 px-4 rounded-full"
+              className="absolute bottom-5 left-5 text-white text-sm sm:text-2xl backdrop-blur-md px-4 sm:px-6 py-2 rounded-full z-20"
               style={{ fontFamily: "var(--font-forum)" }}
             >
-              {selectedSlide + 1} / {projectData.length}
+              {`${selectedSlide + 1} / ${projectData.length}`}
             </div>
           </div>
         </div>

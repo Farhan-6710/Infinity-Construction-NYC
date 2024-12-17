@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { GallerySlide } from "./GallerySlide";
 import { GalleryNavigation } from "./GalleryNavigation";
-import { slides } from "@/data/gallerySlides";
+import { slides } from "@/data/gallerySlidesData";
 
 const Gallery: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -17,15 +17,11 @@ const Gallery: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [totalSlides, setTotalSlides] = useState(0);
 
-  const updateSlidesInView = useCallback(() => {
-    if (!emblaApi) return;
-  }, [emblaApi]);
-
+  
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
-    updateSlidesInView();
-  }, [emblaApi, updateSlidesInView]);
+  }, [emblaApi]);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -46,18 +42,15 @@ const Gallery: React.FC = () => {
 
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
-    emblaApi.on("scroll", updateSlidesInView);
 
     setTotalSlides(emblaApi.scrollSnapList().length);
     onSelect();
-    updateSlidesInView();
 
     return () => {
       emblaApi.off("select", onSelect);
       emblaApi.off("reInit", onSelect);
-      emblaApi.off("scroll", updateSlidesInView);
     };
-  }, [emblaApi, onSelect, updateSlidesInView]);
+  }, [emblaApi, onSelect]);
 
   return (
     <section className="w-full overflow-hidden">
