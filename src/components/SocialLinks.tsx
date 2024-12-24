@@ -40,7 +40,7 @@ const SocialLinks = () => {
             href="https://m.yelp.com/biz/infinity-construction-nyc-brooklyn"
             passHref
             target="_blank"
-          >
+          > 
             <div
               className="flex flex-col items-center text-secondary dark:text-white dark:hover:text-secondary hover:text-primary transition-colors duration-300"
               rel="noopener noreferrer"
