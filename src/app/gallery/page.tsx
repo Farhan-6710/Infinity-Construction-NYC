@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div>
       <HeaderSpecial />
-      <div className="pt-5 sm:pt-32">
+      <div className="pt-5 sm:pt-14">
         <Gallery />
         <TestimonialsHeading />
         <TestimonialSection />

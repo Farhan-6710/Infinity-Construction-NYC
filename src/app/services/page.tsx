@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import HeaderSpecial from "@/components/headerSection/HeaderSpecial";
-import ServicesSection from "@/components/servicesSection/ContactSection";
+import OurServices from "@/components/servicesSection/OurServices";
 import React from "react";
 
 const page = () => {
@@ -8,7 +8,7 @@ const page = () => {
     <div>
       <HeaderSpecial />
       <div className="sm:pt-14">
-        <ServicesSection />
+        <OurServices />
       </div>
       <Footer />
     </div>

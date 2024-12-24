@@ -100,7 +100,7 @@ const CarouselSection: React.FC = () => {
       <button
         onClick={scrollPrev}
         disabled={!canScrollPrev}
-        className="absolute z-20 bottom-5 right-1/2 -translate-x-2 sm:bottom-auto sm:right-auto sm:left-4 sm:top-1/2 -translate-y-1/2 bg-white/10 text-white p-2 rounded-full hover:bg-white/40 backdrop-blur-md"
+        className="absolute z-20 bottom-5 right-1/2 -translate-x-2 sm:bottom-auto sm:right-auto sm:left-4 sm:top-1/2 -translate-y-1/2 bg-white/10 text-white p-2 rounded-full hover:bg-white/40 backdrop-blur-md transition-all duration-200"
       >
         <ChevronLeft className="w-8 h-8 sm:h-14" />
       </button>
@@ -109,7 +109,7 @@ const CarouselSection: React.FC = () => {
       <button
         onClick={scrollNext}
         disabled={!canScrollNext}
-        className="absolute z-20 bottom-5 left-1/2 translate-x-2 sm:bottom-auto sm:left-auto sm:right-4 sm:top-1/2 -translate-y-1/2 bg-white/10 text-white p-2 rounded-full hover:bg-white/40 backdrop-blur-md"
+        className="absolute z-20 bottom-5 left-1/2 translate-x-2 sm:bottom-auto sm:left-auto sm:right-4 sm:top-1/2 -translate-y-1/2 bg-white/10 text-white p-2 rounded-full hover:bg-white/40 backdrop-blur-md transition-all duration-200"
       >
         <ChevronRight className="w-8 h-8 sm:h-14" />
       </button>

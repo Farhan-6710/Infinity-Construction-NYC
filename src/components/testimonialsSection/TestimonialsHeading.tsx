@@ -1,9 +1,9 @@
-import { Phone } from 'lucide-react';
-import React from 'react'
+import { Phone } from "lucide-react";
+import React from "react";
 
 function TestimonialsHeading() {
   return (
-    <div className="relative w-full overflow-hidden bg-secondary/80 dark:bg-gray-900">
+    <div className="relative w-full overflow-hidden bg-secondary/95 dark:bg-gray-900">
       {/* Heading Section */}
       <div
         className="flex flex-col justify-center items-center text-center py-8 px-4 sm:px-8 md:px-64 md:py-20"
@@ -23,7 +23,7 @@ function TestimonialsHeading() {
             us to submit your own.
           </span>
         </p>
-        <button className="flex w-fit bg-secondary text-white px-4 py-3 hover:bg-stone-900 transition-all duration-300 items-center space-x-2">
+        <button className="flex w-fit bg-primary text-white px-4 py-3 hover:bg-stone-900 transition-all duration-300 items-center space-x-2">
           <Phone className="w-5 h-5" />
           <span>347 939 5779</span>
         </button>
@@ -32,4 +32,4 @@ function TestimonialsHeading() {
   );
 }
 
-export default TestimonialsHeading
+export default TestimonialsHeading;

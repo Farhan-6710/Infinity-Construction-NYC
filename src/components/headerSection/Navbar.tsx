@@ -109,7 +109,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <button className="bg-secondary text-white px-4 py-3 hover:bg-stone-900 hover:text-white dark:hover:text-white hover:border-transparent hover:border border border-transparent dark:border-transparent rounded-md shadow-lg transition-all duration-300 flex items-center space-x-2">
+      <button className="bg-primary text-white px-4 py-3 hover:bg-stone-900 hover:text-white dark:hover:text-white hover:border-transparent hover:border border border-transparent dark:border-transparent rounded-md shadow-lg transition-all duration-300 flex items-center space-x-2">
         <Phone className="w-5 h-5" />
         <span>347 939 5779</span>
       </button>

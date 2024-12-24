@@ -1,4 +1,4 @@
-import ServiceSpeciality from "../components/servicesSection/ServiceSpeciality";
+import OurServices from "../components/servicesSection/OurServices";
 import CarouselSection from "../components/carouselSection/CarouselSection";
 import Footer from "../components/Footer";
 import HeaderTwo from "../components/headerSection/HeaderTwo";
@@ -11,6 +11,8 @@ import TestimonialSection from "../components/testimonialsSection/TestimonialSec
 import TestimonialsHeading from "../components/testimonialsSection/TestimonialsHeading";
 import ServicesSection from "@/components/servicesSection/ContactSection";
 import Gallery from "@/components/Gallery";
+import ContactScroll from "@/components/extras/ContactScroll";
+import SocialLinks from "@/components/SocialLinks";
 
 export default function Home() {
   return (
@@ -18,16 +20,18 @@ export default function Home() {
       <HeaderTwo />
       <CarouselSection />
       <HeroSection />
-      <ServicesSection />
-      <ServiceSpeciality />
+      <OurServices />
       <Gallery />
       <ProjectSection />
       <TestimonialsHeading />
       <TestimonialSection />
       <OurAffiliatesSection />
-      <LetsChat />
+      <ServicesSection />
+      <SocialLinks />
       <MapComponent />
       <Footer />
+      <ContactScroll />
+      <LetsChat />
     </>
   );
 }

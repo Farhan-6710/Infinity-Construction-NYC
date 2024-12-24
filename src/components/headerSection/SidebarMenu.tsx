@@ -15,10 +15,14 @@ import {
   Facebook,
   Linkedin,
 } from "lucide-react";
+import { usePathname } from 'next/navigation';  // Import useRouter from next/router
 
 function SidebarMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  const pathname = usePathname(); // Access the current path using usePathname()
+  const isHomePage = pathname === "/"; // Check if the current route is the homepage
 
   // Toggle Sheet open/close
   const toggleSheet = () => {
@@ -33,10 +37,11 @@ function SidebarMenu() {
   return (
     <div>
       {/* Right Div: Mobile Menu Toggle */}
-      <div className="xl:hidden absolute right-4 top-6 sm:right-4">
+      <div className="xl:hidden absolute right-4 top-4 sm:right-4">
         <button
           onClick={toggleSheet}
-          className="text-gray-300 dark:text-gray-300 p-3 hover:text-gray-400 transition-all duration-300"
+          className={`p-3 hover:text-gray-400 transition-all duration-300 
+        ${isHomePage ? "text-gray-300 dark:text-gray-300" : "text-tertiary"}`}
         >
           <Menu className="w-8 h-8" />
         </button>

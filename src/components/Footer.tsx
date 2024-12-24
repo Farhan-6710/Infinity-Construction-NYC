@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="text-white py-20 bg-secondary dark:bg-slate-950">
+    <footer className="text-white py-20 bg-secondary/95 dark:bg-slate-950">
       <div className="container mx-auto px-6 sm:px-12 lg:px-16">
         {/* Flex container for columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 sm:pl-32">
@@ -19,7 +19,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Company Name</h3>
             <div className="flex items-center mb-3">
               {/* Phone icon with background color #FB823A */}
-              <div className="bg-primary p-3 mr-4 rounded-full">
+              <div className="bg-secondary p-3 mr-4 rounded-full">
                 <Phone className="text-white" />
               </div>
               <p className="text-base">
@@ -28,14 +28,14 @@ const Footer = () => {
             </div>
             <div className="flex items-center mb-3">
               {/* Email icon with background color #FB823A */}
-              <div className="bg-primary p-3 mr-4 rounded-full">
+              <div className="bg-secondary p-3 mr-4 rounded-full">
                 <Mail className="text-white" />
               </div>
               <p className="text-base">Email: info@company.com</p>
             </div>
             <div className="flex items-center mb-3">
               {/* Address icon with background color #FB823A */}
-              <div className="bg-primary p-3 mr-4 rounded-full">
+              <div className="bg-secondary p-3 mr-4 rounded-full">
                 <MapPin className="text-white" />
               </div>
               <p className="text-base">

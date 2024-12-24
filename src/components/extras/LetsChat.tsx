@@ -34,7 +34,7 @@ const LetsChat: React.FC = () => {
       <button
         style={{ fontFamily: "var(--font-forum)" }}
         onClick={toggleChat}
-        className="fixed z-10 bottom-6 right-6 bg-secondary text-white p-4 px-6 sm:px-8 md:px-10 rounded-full shadow-lg flex items-center space-x-2 hover:bg-stone-900 transition-all duration-300"
+        className="fixed z-10 bottom-6 right-6 bg-secondary text-white p-4 px-4 sm:px-8 md:px-10 rounded-full shadow-lg flex items-center space-x-2 hover:bg-stone-900 transition-all duration-300"
       >
         <MessageCircle className="w-6 h-6" />
         <span className="hidden sm:inline text-lg">Let&apos;s Chat !</span>
