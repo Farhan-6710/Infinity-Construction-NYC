@@ -17,7 +17,7 @@ export const GallerySlide: React.FC<GallerySlideProps> = ({
     <div
       className={cn(
         // Base styles
-        "relative flex-[0_0_100%] sm:flex-[0_0_33.333%] h-[320px] sm:h-[340px] overflow-hidden",
+        "relative flex-[0_0_100%] sm:flex-[0_0_33.333%] h-[320px] sm:h-[440px] 2xl:h-[550px] overflow-hidden",
         "transform-gpu sm:origin-center px-2 sm:px-4",
       )}
     >

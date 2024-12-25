@@ -1,5 +1,6 @@
 "use client";
 
+import { specialityData } from "@/data/ourServicesData";
 import { Phone } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -51,37 +52,14 @@ const NavbarSpecial = () => {
               SERVICES
             </div>
             <ul className="absolute left-0 mt-0 hidden group-hover:block bg-white dark:bg-gray-800 rounded shadow-lg w-[400px] pt-6">
-              <li className="text-secondary dark:text-gray-100 text-xl px-4 py-2">
-                <Link href="/services">
-                  Historical Landmarks Design Restoration
-                </Link>
-              </li>
-              <li className="text-secondary dark:text-gray-100 text-xl px-4 py-2">
-                <Link href="/services">Brownstone Restoration</Link>
-              </li>
-              <li className="text-secondary dark:text-gray-100 text-xl px-4 py-2">
-                <Link href="/services">Fire Escape Restoration</Link>
-              </li>
-              <li className="text-secondary dark:text-gray-100 text-xl px-4 py-2">
-                <Link href="/services">Masonry Contractors</Link>
-              </li>
-              <li className="text-secondary dark:text-gray-100 text-xl px-4 py-2">
-                <Link href="/services">
-                  Brownstone Renovation Contractors Brooklyn
-                </Link>
-              </li>
-              <li className="text-secondary dark:text-gray-100 text-xl px-4 py-2">
-                <Link href="/services">Brownstone Facade Restoration</Link>
-              </li>
-              <li className="text-secondary dark:text-gray-100 text-xl px-4 py-2">
-                <Link href="/services">Roofing</Link>
-              </li>
-              <li className="text-secondary dark:text-gray-100 text-xl px-4 py-2">
-                <Link href="/services">Paving</Link>
-              </li>
-              <li className="text-secondary dark:text-gray-100 text-xl px-4 py-2">
-                <Link href="/services">Brick Pointing</Link>
-              </li>
+              {specialityData.map((service) => (
+                <li
+                  key={service.heading}
+                  className="cursor-pointer text-secondary dark:text-gray-100 text-xl hover:text-orange-500 px-4 py-2"
+                >
+                  <Link href="/services">{service.heading}</Link>
+                </li>
+              ))}
             </ul>
           </li>
 
@@ -109,15 +87,13 @@ const NavbarSpecial = () => {
           </Link>
 
           <li className="relative z-10 group">
-            <div className="text-xl cursor-pointer">
-              MORE
-            </div>
+            <div className="text-xl cursor-pointer">MORE</div>
             <ul className="absolute left-0 mt-0 hidden group-hover:block bg-white dark:bg-gray-800 rounded shadow-lg">
               <li className="text-secondary dark:text-gray-100 text-xl px-4 py-2">
                 <Link href="/">FAQ</Link>
               </li>
               <li className="text-secondary dark:text-gray-100 text-xl px-4 py-2">
-                <Link href="/">BLOG</Link>
+                <Link href="/blog">BLOG</Link>
               </li>
               <li
                 className={`text-secondary dark:text-gray-100 text-xl px-4 py-2 ${

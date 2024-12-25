@@ -15,33 +15,33 @@ import {
   Facebook,
   Linkedin,
 } from "lucide-react";
-import { usePathname } from 'next/navigation';  // Import useRouter from next/router
+import { usePathname } from "next/navigation";
+import { specialityData } from "@/data/ourServicesData";
 
 function SidebarMenu() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false); // State to toggle services dropdown
 
-  const pathname = usePathname(); // Access the current path using usePathname()
-  const isHomePage = pathname === "/"; // Check if the current route is the homepage
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
-  // Toggle Sheet open/close
   const toggleSheet = () => {
     setIsOpen(!isOpen);
   };
 
-  // Toggle Services Dropdown
   const toggleServicesDropdown = () => {
     setIsServicesOpen(!isServicesOpen);
   };
 
   return (
     <div>
-      {/* Right Div: Mobile Menu Toggle */}
+      {/* Mobile Menu Toggle */}
       <div className="xl:hidden absolute right-4 top-4 sm:right-4">
         <button
           onClick={toggleSheet}
-          className={`p-3 hover:text-gray-400 transition-all duration-300 
-        ${isHomePage ? "text-gray-300 dark:text-gray-300" : "text-tertiary"}`}
+          className={`p-3 hover:text-gray-400 transition-all duration-300 ${
+            isHomePage ? "text-gray-300 dark:text-gray-300" : "text-tertiary"
+          }`}
         >
           <Menu className="w-8 h-8" />
         </button>
@@ -50,7 +50,7 @@ function SidebarMenu() {
       <Sheet open={isOpen} onOpenChange={toggleSheet}>
         <SheetContent
           side="left"
-          className="dark:bg-slate-950 transition-colors duration-300 overflow-y-auto" // Enable scroll in sidebar
+          className="dark:bg-slate-950 transition-colors duration-300 overflow-y-auto"
         >
           <SheetHeader>
             <SheetTitle
@@ -68,7 +68,7 @@ function SidebarMenu() {
               Home
             </Link>
             <Link
-              href="/"
+              href="/about"
               className="text-lg text-gray-700 dark:text-gray-300 hover:text-orange-500"
             >
               About
@@ -88,79 +88,34 @@ function SidebarMenu() {
                 )}
               </button>
               {isServicesOpen && (
-                <div className="ml-4 mt-2 flex flex-col space-y-2">
-                  <Link
-                    href="/"
-                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
-                  >
-                    Historical Landmarks Design Restoration
-                  </Link>
-                  <Link
-                    href="/"
-                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
-                  >
-                    Brownstone Restoration
-                  </Link>
-                  <Link
-                    href="/"
-                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
-                  >
-                    Fire Escape Restoration
-                  </Link>
-                  <Link
-                    href="/"
-                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
-                  >
-                    Masonry Contractors
-                  </Link>
-                  <Link
-                    href="/"
-                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
-                  >
-                    Brownstone Renovation Contractors Brooklyn
-                  </Link>
-                  <Link
-                    href="/"
-                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
-                  >
-                    Brownstone Facade Restoration
-                  </Link>
-                  <Link
-                    href="/"
-                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
-                  >
-                    Roofing
-                  </Link>
-                  <Link
-                    href="/"
-                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
-                  >
-                    Paving
-                  </Link>
-                  <Link
-                    href="/"
-                    className="text-gray-700 dark:text-gray-300 hover:text-orange-500"
-                  >
-                    Brick Pointing
-                  </Link>
+                <div className="mt-2 pl-4">
+                  {specialityData.map((service, index) => (
+                    <Link
+                      key={index}
+                      href={`/services`}
+                      className="block text-sm text-gray-500 dark:text-gray-400 hover:text-orange-500 mt-1"
+                    >
+                      {service.heading}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
 
             <Link
-              href="/"
+              href="/projects"
               className="text-lg text-gray-700 dark:text-gray-300 hover:text-orange-500"
             >
               Projects
             </Link>
             <Link
-              href="/"
+              href="/blog"
               className="text-lg text-gray-700 dark:text-gray-300 hover:text-orange-500"
             >
               Blog
             </Link>
             <Link
-              href="/"
+              href="/contact"
               className="text-lg text-gray-700 dark:text-gray-300 hover:text-orange-500"
             >
               Contact
@@ -177,9 +132,8 @@ function SidebarMenu() {
             </div>
           </div>
 
-          {/* Social Media Icons Section */}
+          {/* Social Media Icons */}
           <div className="mt-6 flex space-x-6 justify-center">
-            {/* Instagram Icon */}
             <a
               href="https://www.instagram.com/infinity_construction_nyc/"
               className="text-white hover:text-pink-500"
@@ -188,8 +142,6 @@ function SidebarMenu() {
             >
               <Instagram className="h-10 w-10 bg-primary text-white rounded-full p-2 hover:bg-tertiary transition-all duration-300" />
             </a>
-
-            {/* Facebook Icon */}
             <a
               href="https://www.facebook.com/InfinityConstructionNYC"
               className="text-white hover:text-blue-500"
@@ -198,8 +150,6 @@ function SidebarMenu() {
             >
               <Facebook className="h-10 w-10 bg-primary text-white rounded-full p-2 hover:bg-tertiary transition-all duration-300" />
             </a>
-
-            {/* LinkedIn Icon */}
             <a
               href="https://www.linkedin.com/in/imrul-hassan-403724268"
               className="text-white hover:text-blue-500"

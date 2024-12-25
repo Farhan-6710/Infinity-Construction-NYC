@@ -46,7 +46,7 @@ export const specialityData = [
     
     {
       id: 7,
-      imageUrl: "/brick-pointing.jpg",
+      imageUrl: "/stone-pointing.jpg",
       heading: "Concrete/Stone/Brick Paving",
       description:
         "We provide professional installation and repair of concrete, stone, and brick paving for sidewalks, driveways, and patios. Our services ensure proper leveling, drainage, and ADA compliance, in adherence with NYC Department of Transportation (DOT) and NYC Department of Buildings (DOB) guidelines.",

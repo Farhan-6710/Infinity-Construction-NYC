@@ -6,7 +6,7 @@ function TestimonialsHeading() {
     <div className="relative w-full overflow-hidden bg-secondary/95 dark:bg-gray-900">
       {/* Heading Section */}
       <div
-        className="flex flex-col justify-center items-center text-center py-8 px-4 sm:px-8 md:px-64 md:py-20"
+        className="flex flex-col justify-center items-center text-center py-8 px-4 sm:px-8 md:px-64 2xl:px-32 md:py-20"
         style={{
           fontFamily: "var(--font-forum)",
         }}
@@ -14,7 +14,7 @@ function TestimonialsHeading() {
         <h2 className="text-4xl sm:text-5xl lg:text-6xl text-white dark:text-white mb-6 sm:mb-8">
           WHAT OUR CLIENTS HAVE TO SAY
         </h2>
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white dark:text-gray-300 mb-6 sm:mb-8 max-w-4xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white dark:text-gray-300 mb-6 sm:mb-8 mx-auto">
           <span className="leading-relaxed">
             There’s no better way to tell you about what we do and how we do it
             than by letting our clients tell you themselves. If you’re happy,

@@ -38,7 +38,7 @@ const OurServices = () => {
               {/* Image Section */}
               <div
                 className={`w-full lg:w-1/3 mb-4 lg:mb-0 border-8 border-tertiary bg-tertiary ${
-                  index % 2 === 0 ? "" : "order-last"
+                  data.id % 2 === 0 ? "sm:order-last" : ""
                 }`}
               >
                 <Image
@@ -46,7 +46,9 @@ const OurServices = () => {
                   alt={data.heading}
                   width={400}
                   height={650}
-                  className="w-full h-full aspect-video object-cover rounded-l-2xl"
+                  className={`w-full h-full aspect-video object-cover ${
+                    data.id % 2 === 0 ? "rounded-r-2xl" : "sm:rounded-l-2xl"
+                  }`}
                   priority
                 />
               </div>

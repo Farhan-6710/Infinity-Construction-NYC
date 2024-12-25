@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div>
       <HeaderSpecial />
-      <div className="pt-5 sm:pt-14">
+      <div className="pt-5 sm:pt-14 2xl:pt-24">
         <ProjectSection />
       </div>
       <Footer />

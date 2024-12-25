@@ -7,6 +7,8 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react"; // Correct import statement
+import { specialityData } from "@/data/ourServicesData";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -18,7 +20,7 @@ const Footer = () => {
           <div className="flex flex-col items-start max-w-xs">
             <h3 className="text-xl font-semibold mb-4">Company Name</h3>
             <div className="flex items-center mb-3">
-              {/* Phone icon with background color #FB823A */}
+              {/* Phone icon */}
               <div className="bg-secondary p-3 mr-4 rounded-full">
                 <Phone className="text-white" />
               </div>
@@ -27,14 +29,14 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex items-center mb-3">
-              {/* Email icon with background color #FB823A */}
+              {/* Email icon */}
               <div className="bg-secondary p-3 mr-4 rounded-full">
                 <Mail className="text-white" />
               </div>
               <p className="text-base">Email: info@company.com</p>
             </div>
             <div className="flex items-center mb-3">
-              {/* Address icon with background color #FB823A */}
+              {/* Address icon */}
               <div className="bg-secondary p-3 mr-4 rounded-full">
                 <MapPin className="text-white" />
               </div>
@@ -45,32 +47,32 @@ const Footer = () => {
             </div>
             <div className="mt-6 flex space-x-6">
               {/* Instagram Icon */}
-              <a
+              <Link
                 href="https://www.instagram.com/infinity_construction_nyc/"
                 className="text-white hover:text-pink-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Instagram className="h-8 w-8 bg-white text-black rounded-full p-2" />
-              </a>
+              </Link>
               {/* Facebook Icon */}
-              <a
+              <Link
                 href="https://www.facebook.com/InfinityConstructionNYC"
                 className="text-white hover:text-blue-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Facebook className="h-8 w-8 bg-white text-black rounded-full p-2" />
-              </a>
-              {/* Twitter Icon */}
-              <a
+              </Link>
+              {/* LinkedIn Icon */}
+              <Link
                 href="https://www.linkedin.com/in/imrul-hassan-403724268"
                 className="text-white hover:text-blue-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Linkedin className="h-8 w-8 bg-white text-black rounded-full p-2" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -79,29 +81,34 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Useful Links</h3>
             <ul className="space-y-2 text-base">
               <li>
-                <a href="/home" className="hover:underline">
+                <Link href="/home" className="hover:underline">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about-us" className="hover:underline">
+                <Link href="/about-us" className="hover:underline">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/gallery" className="hover:underline">
+                <Link href="/gallery" className="hover:underline">
                   Gallery
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/projects" className="hover:underline">
+                <Link href="/projects" className="hover:underline">
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services" className="hover:underline">
+                <Link href="/services" className="hover:underline">
                   Services
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:underline">
+                  Blog
+                </Link>
               </li>
             </ul>
 
@@ -111,17 +118,16 @@ const Footer = () => {
           </div>
 
           {/* Column 3: Services */}
-          <div className="flex flex-col items-start max-w-xs">
+          <div className="flex flex-col items-start">
             <h3 className="text-xl font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-base">
-              <li>Brownstone Restoration</li>
-              <li>Brownstone Facade Restoration</li>
-              <li>Roofing Solutions</li>
-              <li>Brick Pointing</li>
-              <li>Stucco Work</li>
-              <li>Fire Escape Restoration</li>
-              <li>Waterproofing</li>
-              <li>Masonry</li>
+              {specialityData.map((service) => (
+                <li key={service.id}>
+                  <Link href="/services" className="hover:underline">
+                    {service.heading}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
