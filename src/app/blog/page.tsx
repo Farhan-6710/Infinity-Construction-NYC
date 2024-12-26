@@ -1,4 +1,4 @@
-import BlogData from "@/components/BlogData";
+import BlogData from "@/components/BlogSection";
 import Footer from "@/components/Footer";
 import HeaderSpecial from "@/components/headerSection/HeaderSpecial";
 import React from "react";
